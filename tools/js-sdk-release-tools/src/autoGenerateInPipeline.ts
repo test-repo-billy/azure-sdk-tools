@@ -11,7 +11,7 @@ const shell = require('shelljs');
 const fs = require('fs');
 
 async function automationGenerateInPipeline(inputJsonPath: string, outputJsonPath: string, use: string | undefined, typespecEmitter: string | undefined, sdkGenerationType: string | undefined) {
-    console.log('Start to generate js sdk in pipeline')
+    console.log('Start to generate js sdk in pipeline.')
     const inputJson = JSON.parse(fs.readFileSync(inputJsonPath, { encoding: 'utf-8' }));
     const specFolder: string = inputJson['specFolder'];
     const readmeFiles: string[] | string | undefined = inputJson['relatedReadmeMdFiles'] ? inputJson['relatedReadmeMdFiles'] : inputJson['relatedReadmeMdFile'];
